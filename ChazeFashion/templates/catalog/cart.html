@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container mx-auto px-4 py-6">
+  <h2 class="text-2xl font-bold mb-4">Your Cart</h2>
+
+  {% if cart_items %}
+    <div class="space-y-4">
+      {% for item in cart_items %}
+        <div class="flex justify-between items-center bg-white p-4 shadow rounded-lg">
+          <div>
+            <h3 class="font-semibold text-lg">{{ item.product.pr_name }}</h3>
+<p>Quantity: {{ item.quantity }}</p>
+<p>Price: ₹{{ item.product.pr_price }}</p>
+<p>Subtotal: ₹{{ item.subtotal }}</p>
+
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+    <div class="mt-6 text-right font-bold text-xl">
+      Total: ₹{{ total }}
+    </div>
+  {% else %}
+    <p>Your cart is empty.</p>
+  {% endif %}
+</div>
+{% endblock %}

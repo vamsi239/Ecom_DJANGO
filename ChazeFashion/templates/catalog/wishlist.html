@@ -11,15 +11,10 @@
             {% for product in wishlist.products.all %}
             <div class="card bg-base-100 shadow-xl hover:shadow-2xl transition-shadow">
                 <figure class="px-4 pt-4">
-                    {% if product.pr_images %}
-                        <img src="{{ product.pr_images.url }}" alt="{{ product.pr_name }}" 
-                             class="rounded-xl h-48 w-full object-cover" />
-                    {% else %}
-                        <div class="bg-base-300 rounded-xl h-48 w-full flex items-center justify-center">
-                            <i class="fas fa-tshirt text-6xl text-base-content opacity-50"></i>
-                        </div>
-                    {% endif %}
-                </figure>
+                    <div class="flex items-center justify-center rounded-xl h-48 w-full bg-gray-200 text-gray-700 text-xl font-semibold">
+                        Coming Soon
+                    </div>
+                    </figure>
                 <div class="card-body">
                     <h2 class="card-title">{{ product.pr_name }}</h2>
                     <div class="flex items-center gap-2 mb-2">

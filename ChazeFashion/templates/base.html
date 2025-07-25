@@ -40,6 +40,10 @@
                 {% if user.is_authenticated %}
                     <li><a href="{% url 'wishlist' %}">Wishlist</a></li>
                     <li><a href="{% url 'profile' %}">Profile</a></li>
+                    <a href="{% url 'cart' %}" class="btn btn-sm btn-primary">
+  🛒 Cart ({{ request.session.cart|length|default:"0" }})
+</a>
+
                 {% endif %}
             </ul>
         </div>

@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-
+{% load static %}
 {% block title %}{{ product.pr_name }} - ChazeFashion{% endblock %}
 
 {% block content %}
@@ -17,15 +17,10 @@
         <!-- Product Image -->
         <div class="card bg-base-100 shadow-xl">
             <figure class="px-4 pt-4">
-                {% if product.pr_images %}
-                    <img src="{{ product.pr_images.url }}" alt="{{ product.pr_name }}" 
-                         class="rounded-xl w-full h-96 object-cover" />
-                {% else %}
-                    <div class="bg-base-300 rounded-xl w-full h-96 flex items-center justify-center">
-                        <i class="fas fa-tshirt text-8xl text-base-content opacity-50"></i>
-                    </div>
-                {% endif %}
-            </figure>
+    <div class="bg-base-300 rounded-xl w-full h-96 flex items-center justify-center">
+        <p class="text-xl text-base-content opacity-60 font-semibold">Coming Soon</p>
+    </div>
+</figure>
         </div>
         
         <!-- Product Details -->
